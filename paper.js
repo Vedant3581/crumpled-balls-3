@@ -1,13 +1,15 @@
-class Paper extends BaseClass{
-    constructor(x, y, width, height) {
-      super(100,600,40,40);
-      this.image = loadImage("sprites/paper.png");
-    }    
+class Paper extends BaseClass {
+  constructor(x, y) {
+    super(x, y, 70, 70);
+    this.image = loadImage("sprites/paper.png");
+  }
+  display() {
 
-    display(){
-      super.display();
-    }
-    fly() {
-      this.chain.bodyA=null;
-   }
+
+    super.display();
+  }
+
+  fly() {
+    bodyA = null;
+  }
 }

@@ -1,5 +1,5 @@
 class BaseClass{
-    constructor(x, y, width, height, angle) {
+    constructor(x, y, width, height) {
         var options = {
             'restitution':0.8,
             'friction':1.0,
@@ -12,12 +12,8 @@ class BaseClass{
         World.add(world, this.body);
       }
       display(){
-        var angle = this.body.angle;
-        push();
-        translate(this.body.position.x, this.body.position.y);
-        rotate(angle);
         imageMode(CENTER);
-        image(this.image, 0, 0, this.width, this.height);
-        pop();
+        image(this.image, this.body.position.x, this.body.position.y,this.width,this.height);
+        
       }
 }
